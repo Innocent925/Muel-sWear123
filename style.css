@@ -1,0 +1,318 @@
+
+*{
+    
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Jost", serif;
+    min-height: 100vh;
+   background-color: bisque;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+.navbar-logo{
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px);
+}
+.navbar-container .navbar-menu{
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+.navbar-container .navbar-menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500px;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+.navbar-container .navbar-menu li a:hover{
+    color: rgb(70, 59, 59);
+    background-color: aquamarine;
+    border: 2px solid white;
+}
+.navbar-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgb(41, 28, 28);
+    transition: all 0.3s ease-in-out;
+    
+}
+@media(max-width:880px){
+    .navbar{
+        backdrop-filter: none;
+    }
+    .navbar-container .navbar-menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    .navbar-container .navbar-menu.active{
+        display: flex;
+    }
+    .navbar-toggle{
+        display: block;
+        z-index: 999;
+    }
+    .navbar-toggle.active .bar:nth-child(2){
+        opacity: 0;
+    }
+     .navbar-toggle.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+     }
+      .navbar-toggle.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+     }
+}
+@media (max-width:480px) {
+    .navbar-container{
+        padding: 0 1.7rem;
+    }
+    .navbar-container .navbar-menu li a{
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
+
+ .sec1 {
+    margin-top: 100px;
+    padding: 8rem 5%;
+    background-color:white ;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+ }
+ #div1{
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    
+ }
+ @keyframes glow{
+    from{transform: scale(0.3,0.2);}
+ }
+ .btn1{
+    padding: 10px;
+    background-color: aqua;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    transition: 0.2rem;
+ }
+ .btn1:hover{
+    color: white;
+    background-color: black;
+    transition: 0.7s;
+    
+ }
+ .sec2{
+    margin-top: 100px;
+    padding: 8rem 5%;
+    background-color:white ;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
+ }
+ .social-icons a:nth-child(1){color: yellow; 
+border-radius: 5px;}
+.social-icons a:nth-child(2){color: rgb(8, 182, 31);}
+.social-icons a:nth-child(3){color: blue;}
+.social-icons a:nth-child(4){color:rgb(165, 30, 59)}
+ 
+
+ .Products{
+    padding: 5rem 5%;
+    
+}
+
+.Product-grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-gap:2.5rem ;
+margin-top: 3rem;
+
+
+}
+.Product-card{
+    background: var(--dark-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(151, 8, 8, 0.3);
+    transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+
+}
+.Product-card:hover{
+    transform: translateY(-10px);
+}
+.Product-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    
+
+    
+}
+.Product-Info{
+    padding:1.5rem;
+    position: relative;
+}
+.Product-title{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    
+}
+.Product-price{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+article{
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+main{
+    text-align: center;
+}
+.div1{
+    font-size: x-large;
+    font-weight: 700;
+   color: #d80a0a;
+   text-align: center;
+}
+.div2{
+    font-size: x-large;
+    font-weight: 700;
+   color: #0ad825;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div3{
+    font-size: x-large;
+    font-weight: 700;
+   color: #12899e;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div4{
+    font-size: x-large;
+    font-weight: 700;
+   color: #9fa127;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div5{
+    font-size: x-large;
+    font-weight: 700;
+   color: #2729a1;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div6{
+    font-size: x-large;
+    font-weight: 700;
+   color: #da2ea0;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div7{
+    font-size: x-large;
+    font-weight: 700;
+   color: #e44a1b;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+.div8{
+    font-size: x-large;
+    font-weight: 700;
+   color: white;
+   text-align: center;
+   animation-name: glow;
+   animation-duration: 1s;
+   
+}
+@keyframes glow{
+    from{transform: scale(0.2,0.3);}
+}
+aside{
+   font-size: large;
+    position: relative;
+    top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
